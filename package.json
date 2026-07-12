@@ -2,7 +2,7 @@
   "name": "monicipality",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://municipality-frontend-prototype/Login",
+  "homepage": "https://municipality-frontend-prototype.onrender.com/Login",
   "type": "module",
   "scripts": {
     "dev": "vite",
