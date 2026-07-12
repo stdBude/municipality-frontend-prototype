@@ -1,0 +1,14 @@
+.Header{
+    background-color: #dfc324;
+    margin: 0px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 5px 20px 10px rgba(73, 73, 73, 0.473);
+    
+}
+p{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Brush Script MT';
+    font-weight: lighter;
+}
