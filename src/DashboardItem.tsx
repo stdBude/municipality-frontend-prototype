@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import {useParams} from 'react-router-dom'
 import Header from './elements/shared/Header'
 import { useGetRequestByIdMutation } from './elements/redux/APIs'

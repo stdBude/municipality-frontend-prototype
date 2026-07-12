@@ -2,6 +2,7 @@
   "name": "monicipality",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://municipality-frontend-prototype/Login",
   "type": "module",
   "scripts": {
     "dev": "vite",

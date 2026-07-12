@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Form1.css'
 import { useCreateRequestMutation } from '../redux/APIs'
 import { useParams, useNavigate } from 'react-router-dom'
-import { SlArrowDown } from 'react-icons/sl';
+
 const Form = () => {
     const {id} = useParams()
     const [title, setTitle] = React.useState('')
@@ -17,8 +17,8 @@ const Form = () => {
     const [typeSlug, setTypeSlug] = React.useState<string>('')
 
     useEffect(() =>{
-      const handleClick = (e) =>{
-        if(!comboRef.current.contains(e.target)){
+      const handleClick = (e: MouseEvent) =>{
+        if (comboRef.current && !comboRef.current.contains(e.target as Node)){
           setSelectedType(false)
         }
       }

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Form = () => {
     const [username, setUsername] = React.useState('')
     const [password, setPassword] = React.useState('')
-    const [isError, setIsError] = React.useState<boolean | null>(null)
+ 
     const navigate = useNavigate()
     const [login] = useLoginMutation()
     const [adminLogin] = useAdminLoginMutation()
@@ -19,14 +19,14 @@ const Form = () => {
           const token = data?.token
 
           if (!token) {
-            setIsError(true)
+            
             return
           }
           if(data?.user.role === 'user'){
             
             navigate(`/user-dashboard/${data?.user._id}`)
           }
-          setIsError(false)
+          
           localStorage.setItem('token', token)
           
           const adminData = await adminLogin(token).unwrap()
@@ -37,7 +37,7 @@ const Form = () => {
           }
          
         } catch {
-          setIsError(true)
+          
           return
         }
         
