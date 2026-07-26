@@ -1,10 +1,11 @@
-.sidebar-header{
+.sidebar-header-user{
     display: flex;
     flex-direction: row;
-    
+    place-content: center;
+    place-items: center;
 
 }
-.sidebar{
+.sidebar-user{
     background-color: rgb(233, 203, 30);
     width:17%;
     height: 180px;
@@ -14,7 +15,7 @@
     top: 30px;
     box-shadow: 0px 0px 10px rgb(128, 128, 128);
 }
-.filter-item{
+.filter-item-user{
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
@@ -22,26 +23,29 @@
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.filter-input {
+.table-order-user{
+    position: relative;
+    top: 40px
+}
+.filter-input-user {
     width: 80%;
     border: 2px;
     border-style: solid;
     border-color: white;
     border-radius: 5px;
 }
-.filter-input:focus{
+.filter-input-user:focus{
     outline: none;
     border: 2px ;
     border-style: solid;
     border-color: rgb(175, 175, 175);
 }
 
-.filter{
+.filter-user{
     width: 80%;
 
 }
-.table-header{
+.table-header-user{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     position: relative;
@@ -52,8 +56,9 @@
     place-items: center;
     place-content: center;
     box-shadow: 0px 0px 10px rgb(128, 128, 128);
+    left: 5%;
 }
-.table-header p{
+.table-header-user p{
     place-items: center;
     place-content: center;
     font-size: 35px;
@@ -62,18 +67,18 @@
     position: relative;
     left: 45%;
 }
-.table{
+.table-user{
     place-items: center;
     place-content: center;
     width: 90%;
     position: relative;
     top: 40px;
 }
-.table-header > .ceil{
+.table-header-user > .ceil-user{
     place-items: center;
     place-content: center;
 }
-.request-card{
+.request-card-user{
     display: flex;
     flex-direction: row ;
     
@@ -90,11 +95,11 @@
     box-shadow: 0px 0px 10px rgb(128, 128, 128);
     
 }
-.request-card:hover{
+.request-card-user:hover{
     background-color: rgb(128, 128, 128);
     cursor: pointer;
 }
-.request-card  .table-row{
+.request-card-user  .table-row-user{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     flex: 1;
@@ -105,16 +110,14 @@
     
    
 }
-.request-card  .table-row  p{
+.request-card-user  .table-row-user  p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
 
 }
 
-.request-card > .table-row img{
+.request-card-user > .table-row-user img{
     width: 70%;
 }
 
     
-
-

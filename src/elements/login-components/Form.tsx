@@ -22,12 +22,13 @@ const Form = () => {
             
             return
           }
+          localStorage.setItem('token', token)
           if(data?.user.role === 'user'){
             
-            navigate(`/user-dashboard/${data?.user._id}`)
+            navigate(`/Navigation/${data?.user._id}`)
           }
           
-          localStorage.setItem('token', token)
+          
           
           const adminData = await adminLogin(token).unwrap()
           if(adminData?.user.role === 'admin'){

@@ -53,22 +53,22 @@ const Main = () => {
     })
 
   return (
-    <div>
+    <div className='align'>
         <div className="sidebar-header">
             <section className="sidebar">
-                <h2>Filter</h2>
+                <h2 style={{fontFamily:"Arial, Helvetica, sans-serif", fontSize:"40px", marginLeft:"10%"}}>Filter</h2>
                 <div className="filter">
                     <div className="filter-item">
                         <label htmlFor="filter">Filter Region:</label>
-                        <input type="text" id="filter" name="filter" placeholder="Region" value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)} />
+                        <input type="text" className='filter-input' id="filter" name="filter" placeholder="Region" value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)} />
                     </div>
                     <div className="filter-item">
                         <label htmlFor="filter">Filter Type:</label>
-                        <input type="text" id="filter" name="filter" placeholder="Request type" value={filterType} onChange={(e) => setFilterType(e.target.value)} />
+                        <input type="text" className='filter-input' id="filter" name="filter" placeholder="Request type" value={filterType} onChange={(e) => setFilterType(e.target.value)} />
                     </div>
                 </div>
             </section>
-            <div className="table-order">
+            <div className="table">
                 <section className="table-header " >
                     <p className='cell'>Type</p>
                     <p className='cell'>Region</p>
@@ -76,7 +76,7 @@ const Main = () => {
                     <p className='cell'>image</p>
                     <p className='cell'>Title</p>
                 </section>
-                
+                <div className= "whole">
                     {isLoading ? (
                         <p>Loading...</p>
                     ) : isError ? (
@@ -89,14 +89,14 @@ const Main = () => {
                                     <p className='cell'>{request.region}</p>
                                     <p className='cell'>...{request.description.slice(0, 10)}</p>
                                     <img className='cell' src={request.imageRef} alt={request.title} />
-                                    <p className='cell cell-head' style={{ fontWeight: 'bold', fontSize: '25px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.99)', backgroundColor: '#dfc324', padding: '15px', borderRadius: '20px' }}>
+                                    <p className='cell cell-head' style={{backgroundColor: "rgb(219, 194, 49)", padding: "15px", borderRadius:"20px", boxShadow:"0px 0px 10px rgb(128, 128, 128)"}} >
                                         {request.title.slice(0, 10)}
                                     </p>
                                 </div>
                             </section>
                         ))
                     )}
-                
+                </div>
             </div>
         </div>
     </div>

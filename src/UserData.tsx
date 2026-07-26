@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './Main.css'
+import './alittleMain.css'
 import { useGetByUserMutation } from './elements/redux/APIs'
 import { useNavigate , useParams} from 'react-router-dom'
 import Header from './elements/shared/Header'
@@ -44,15 +44,15 @@ const UserData = () => {
    return (
      <div>
         <Header/>
-         <div className="sidebar-header">
+         <div className="sidebar-header-user">
            
-             <div className="table-order">
-                 <section className="table-header " >
-                     <p className='cell'>Type</p>
-                     <p className='cell'>Region</p>
-                     <p className='cell'>Description</p>
-                     <p className='cell'>image</p>
-                     <p className='cell'>Title</p>
+             <div className="table-order-user">
+                 <section className="table-header-user " >
+                     <p className='cell-user'>Type</p>
+                     <p className='cell-user'>Region</p>
+                     <p className='cell-user'>Description</p>
+                     <p className='cell-user'>image</p>
+                     <p className='cell-user'>Title</p>
                  </section>
                  
                      {isLoading ? (
@@ -61,13 +61,13 @@ const UserData = () => {
                          <p>Error occurred while fetching requests.</p>
                      ) : (
                          data?.request?.map((request:  Request) => (
-                             <section className="request-card" onClick={() =>handleClick(request._id)} key={request._id}>
-                                 <div className="table-row">
-                                     <p className='cell '>{request.typeOfRequest}</p>
-                                     <p className='cell'>{request.region}</p>
-                                     <p className='cell'>...{request.description.slice(0, 10)}</p>
-                                     <img className='cell' src={request.imageRef} alt={request.title} />
-                                     <p className='cell cell-head' style={{ fontWeight: 'bold', fontSize: '25px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.99)', backgroundColor: '#dfc324', padding: '15px', borderRadius: '20px' }}>
+                             <section className="request-card-user" onClick={() =>handleClick(request._id)} key={request._id}>
+                                 <div className="table-row-user">
+                                     <p className='cell-user '>{request.typeOfRequest}</p>
+                                     <p className='cell-user'>{request.region}</p>
+                                     <p className='cell-user'>...{request.description.slice(0, 10)}</p>
+                                     <img className='cell-user' src={request.imageRef} alt={request.title} />
+                                     <p className='cell-user cell-head-user' style={{ fontWeight: 'bold', fontSize: '25px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.99)', backgroundColor: '#dfc324', padding: '15px', borderRadius: '20px' }}>
                                          {request.title.slice(0, 10)}
                                      </p>
                                  </div>
