@@ -20,11 +20,11 @@ const FormNavigate = ({idValue}:Props) => {
             <h2 id="navigate-header" >Choose link</h2>
             <div className="div-form-mechanism">
                 <div className="div-form-mechanism-piece">
-                    <label className="div-form-label" htmlFor="user-data"> User Data</label>
+                    <label className="div-form-label" htmlFor="user-data"> User Data Creation</label>
                     <button className="div-form-button" onClick={handleUser}> Enter</button>
                 </div>
                 <div className="div-form-mechanism-piece">
-                    <label className="div-form-label" htmlFor="userdashboard"> User Data Creation</label>
+                    <label className="div-form-label" htmlFor="userdashboard"> User Dashboard</label>
                     <button className="div-form-button" onClick={handledash}> Enter</button>
                 </div>
             </div>
