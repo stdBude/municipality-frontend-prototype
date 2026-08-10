@@ -51,8 +51,8 @@ const UserData = () => {
                      <p className='cell-user'>Type</p>
                      <p className='cell-user'>Region</p>
                      <p className='cell-user'>Description</p>
-                     <p className='cell-user'>image</p>
                      <p className='cell-user'>Title</p>
+                     <p className='cell-user'>image</p>
                  </section>
                  
                      {isLoading ? (
