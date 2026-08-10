@@ -56,25 +56,27 @@ const Main = () => {
     <div className='align'>
         <div className="sidebar-header">
             <section className="sidebar">
-                <h2 style={{fontFamily:"Arial, Helvetica, sans-serif", fontSize:"40px", marginLeft:"10%"}}>Filter</h2>
+                <h2 style={{fontFamily:"Arial, Helvetica, sans-serif", fontSize:"40px", marginLeft:"10%"}}>الفلترة</h2>
                 <div className="filter">
                     <div className="filter-item">
-                        <label htmlFor="filter">Filter Region:</label>
                         <input type="text" className='filter-input' id="filter" name="filter" placeholder="Region" value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)} />
+                        <label htmlFor="filter">فلترة المكان</label>
+                        
                     </div>
                     <div className="filter-item">
-                        <label htmlFor="filter">Filter Type:</label>
                         <input type="text" className='filter-input' id="filter" name="filter" placeholder="Request type" value={filterType} onChange={(e) => setFilterType(e.target.value)} />
+                        <label htmlFor="filter">فلترة النوع</label>
+                        
                     </div>
                 </div>
             </section>
             <div className="table">
                 <section className="table-header " >
-                    <p className='cell'>Type</p>
-                    <p className='cell'>Region</p>
-                    <p className='cell'>Description</p>
-                    <p className='cell'>Title</p>
-                    <p className='cell'>image</p>
+                    <p className='cell'>النوع</p>
+                    <p className='cell'>المنطقة</p>
+                    <p className='cell'>الوصف</p>
+                    <p className='cell'>العنوان</p>
+                    <p className='cell'>الصورة</p>
                 </section>
                 <div className= "whole">
                     {isLoading ? (
@@ -85,7 +87,11 @@ const Main = () => {
                         filteredRequests.map((request: Request) => (
                             <section className="request-card"  onClick={() =>handleClick(request._id)} key={request._id}>
                                 <div className="table-row">
-                                    <p className='cell ' style={{fontSize : "25px"}}>{request.typeOfRequest}</p>
+                                    <p className='cell ' style={{fontSize : "25px" , backgroundColor:
+                                     request.typeOfRequest === "Road Crack" ? "rgba(52, 250, 13, 0.24)": request.typeOfRequest === "Electricity" ? "rgba(20, 16, 238, 0.29)" :
+                                     request.typeOfRequest === "Water Supply" ? "rgba(233, 229, 13, 0.31)" : request.typeOfRequest === "Garbage Collection" ? "rgba(231, 26, 26, 0.27)" : "rgba(14, 10, 10, 0.29)", padding: "5px", borderRadius: "5px",
+                                     color: request.typeOfRequest === "Road Crack" ? "rgb(33, 168, 6)": request.typeOfRequest === "Electricity" ? "rgb(14, 12, 180)" :
+                                     request.typeOfRequest === "Water Supply" ? "rgb(233, 229, 13)" : request.typeOfRequest === "Garbage Collection" ? "rgb(141, 5, 5)" : "rgb(65, 65, 65)" }}>{request.typeOfRequest}</p>
                                     <p className='cell' style={{fontSize : "25px"}}>{request.region}</p>
                                     {request.description.slice(0, 20) < request.description ?
                                     (<p className='cell' style={{fontSize : "15px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
