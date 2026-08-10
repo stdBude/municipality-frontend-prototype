@@ -70,10 +70,10 @@ const Form = () => {
         <div className="form-type-field" ref={comboRef}>
           <p className="form-type-toggle" style={{border: type === "Type" ? "1px solid #d41b1b" :""}} onClick={() => setSelectedType((prev) => !prev)}>{type || 'Select Type'}</p>
           <section className="form-sec" id="Type" style={{display: selectedType ? 'block' : 'none'}}>
-            <p style={{borderRadius: "5px 5px 0px 0px"}} onClick= {() => {setType('Road Crack'); setTypeSlug('roadCrack'); setSelectedType(false)}}> Road Crack</p>
-            <p onClick= {() => {setType('Electricity'); setTypeSlug('electricity'); setSelectedType(false)}}> Electricity</p>
-            <p onClick= {() => {setType('Water Supply'); setTypeSlug('waterSupply'); setSelectedType(false)}}> Water Supply</p>
-            <p onClick= {() => {setType('Garbage Collection'); setTypeSlug('garbageCollection'); setSelectedType(false)}}> Garbage Collection</p>
+            <p style={{borderRadius: "5px 5px 0px 0px"}} onClick= {() => {setType('Road Crack'); setTypeSlug('Road Crack'); setSelectedType(false)}}> Road Crack</p>
+            <p onClick= {() => {setType('Electricity'); setTypeSlug('Electricity'); setSelectedType(false)}}> Electricity</p>
+            <p onClick= {() => {setType('Water Supply'); setTypeSlug('Water Supply'); setSelectedType(false)}}> Water Supply</p>
+            <p onClick= {() => {setType('Garbage Collection'); setTypeSlug('Garbage Collection'); setSelectedType(false)}}> Garbage Collection</p>
             <p style={{borderRadius: "0px 0px 5px 5px"}} onClick= {() => {setType('Other'); setTypeSlug('other'); setSelectedType(false)}}> Other</p>
           </section>
         </div>

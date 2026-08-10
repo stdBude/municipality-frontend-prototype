@@ -63,13 +63,21 @@ const UserData = () => {
                          data?.request?.map((request:  Request) => (
                              <section className="request-card-user" onClick={() =>handleClick(request._id)} key={request._id}>
                                  <div className="table-row-user">
-                                     <p className='cell-user '>{request.typeOfRequest}</p>
-                                     <p className='cell-user'>{request.region}</p>
-                                     <p className='cell-user'>...{request.description.slice(0, 10)}</p>
+                                     <p className='cell-user ' style={{fontSize : "25px"}}>{request.typeOfRequest}</p>
+                                     <p className='cell-user' style={{fontSize : "25px"}}>{request.region}</p>
+                                     
+                                     {request.description.slice(0, 20) < request.description ?
+                                    (<p className='cell' style={{fontSize : "20px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
+                                    (<p className='cell' style={{fontSize : "20px", color: "rgb(32, 32, 32)"}}>{request.description.slice(0, 20)}</p>)
+                                    }
+                                    {request.title.slice(0, 8)< request.title ? 
+                                    (<p className='cell-user cell-head-user' style={{ padding: "15px", fontWeight: "bolder"  }} >
+                                            ...{request.title.slice(0, 8)}
+                                    </p>) : (<p className='cell-user cell-head-user' style={{ padding: "15px", fontWeight: "bolder"  }} >
+                                            {request.title.slice(0, 8)}
+                                    </p>)}
                                      <img className='cell-user' src={request.imageRef} alt={request.title} />
-                                     <p className='cell-user cell-head-user' style={{ fontWeight: 'bold', fontSize: '25px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.99)', backgroundColor: '#dfc324', padding: '15px', borderRadius: '20px' }}>
-                                         {request.title.slice(0, 10)}
-                                     </p>
+                                     
                                  </div>
                              </section>
                          ))

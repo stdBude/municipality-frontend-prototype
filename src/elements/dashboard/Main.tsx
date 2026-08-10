@@ -83,7 +83,7 @@ const Main = () => {
                         <p>Error occurred while fetching requests.</p>
                     ) : (
                         filteredRequests.map((request: Request) => (
-                            <section className="request-card" onClick={() =>handleClick(request._id)} key={request._id}>
+                            <section className="request-card"  onClick={() =>handleClick(request._id)} key={request._id}>
                                 <div className="table-row">
                                     <p className='cell ' style={{fontSize : "25px"}}>{request.typeOfRequest}</p>
                                     <p className='cell' style={{fontSize : "25px"}}>{request.region}</p>
