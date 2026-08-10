@@ -7,7 +7,7 @@ const Dashboard = () => {
 
 
   return (
-    <div>
+    <div >
       <Header/>
       <Main/>
     </div>

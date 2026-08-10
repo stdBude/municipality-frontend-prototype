@@ -73,8 +73,8 @@ const Main = () => {
                     <p className='cell'>Type</p>
                     <p className='cell'>Region</p>
                     <p className='cell'>Description</p>
-                    <p className='cell'>image</p>
                     <p className='cell'>Title</p>
+                    <p className='cell'>image</p>
                 </section>
                 <div className= "whole">
                     {isLoading ? (
@@ -85,13 +85,19 @@ const Main = () => {
                         filteredRequests.map((request: Request) => (
                             <section className="request-card" onClick={() =>handleClick(request._id)} key={request._id}>
                                 <div className="table-row">
-                                    <p className='cell '>{request.typeOfRequest}</p>
-                                    <p className='cell'>{request.region}</p>
-                                    <p className='cell'>...{request.description.slice(0, 10)}</p>
+                                    <p className='cell ' style={{fontSize : "25px"}}>{request.typeOfRequest}</p>
+                                    <p className='cell' style={{fontSize : "25px"}}>{request.region}</p>
+                                    {request.description.slice(0, 20) < request.description ?
+                                    (<p className='cell' style={{fontSize : "15px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
+                                    (<p className='cell' style={{fontSize : "15px", color: "rgb(32, 32, 32)"}}>{request.description.slice(0, 20)}</p>)
+                                    }
+                                    {request.title.slice(0, 8)< request.title ? 
+                                    (<p className='cell cell-head' style={{ padding: "15px", fontWeight: "bolder"  }} >
+                                            ...{request.title.slice(0, 8)}
+                                    </p>) : (<p className='cell cell-head' style={{ padding: "15px", fontWeight: "bolder"  }} >
+                                            {request.title.slice(0, 8)}
+                                    </p>)}
                                     <img className='cell' src={request.imageRef} alt={request.title} />
-                                    <p className='cell cell-head' style={{backgroundColor: "rgb(219, 194, 49)", padding: "15px", borderRadius:"20px", boxShadow:"0px 0px 10px rgb(128, 128, 128)"}} >
-                                        {request.title.slice(0, 10)}
-                                    </p>
                                 </div>
                             </section>
                         ))

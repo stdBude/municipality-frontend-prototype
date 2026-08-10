@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     position: relative;
-    border-radius: 50px;
+    border-radius: 25px;
     width: 90%;
     background-color: rgb(233, 203, 30);
     height: 120px;
@@ -78,17 +78,20 @@
     flex-direction: row ;
     
     position: relative;
-    border-radius: 50px;
+    border-radius: 25px;
     
-    background-color: rgb(214, 214, 214);
+    background-color: rgba(230, 230, 230, 0.733);
     height: 150px;
     place-items: center;
     place-content: center;
     margin-top: 20px;
     width: 90% ;
     left: 5%;
-    box-shadow: 0px 0px 10px rgb(128, 128, 128);
+    box-shadow: 0px 0px 30px rgb(128, 128, 128);
     
+}
+.table-header > .cell-head{
+    font-weight: bolder;
 }
 .request-card:hover{
     background-color: rgb(128, 128, 128);
