@@ -80,7 +80,7 @@ const Main = () => {
                 </section>
                 <div className= "whole">
                     {isLoading ? (
-                        <p>Loading...</p>
+                        <p style={{fontFamily:"Arial"}}>Loading...</p>
                     ) : isError ? (
                         <p>Error occurred while fetching requests.</p>
                     ) : (

@@ -10,7 +10,9 @@ const Form = () => {
  
     const navigate = useNavigate()
     const [login, {isLoading, error}] = useLoginMutation()
-    const [adminLogin] = useAdminLoginMutation()
+    const [adminLogin, { isLoading: isLoadingAdmin }] = useAdminLoginMutation()
+
+    const isLoadingAll = Boolean(isLoading) || Boolean(isLoadingAdmin)
 
 
     const onsubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -47,7 +49,7 @@ const Form = () => {
 
   return (
     <div className="login-page">
-      {isLoading? (<p style={{fontFamily: "Arial", placeContent: "center", placeItems: "center"}}>Loading...</p>): error ? 
+      {isLoadingAll ? (<p style={{fontFamily: "Arial", textAlign: "center"}}>Loading...</p>): error ? 
       (<form className="login-form" onSubmit= {onsubmit}>
         <h1 className="form-title">Login</h1>
         <label className="form-label" htmlFor="username">Username</label>

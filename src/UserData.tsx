@@ -56,7 +56,7 @@ const UserData = () => {
                  </section>
                  
                      {isLoading ? (
-                         <p>Loading...</p>
+                         <p style={{fontFamily:"Arial", textAlign: "center"}}>Loading...</p>
                      ) : isError ? (
                          <p>Error occurred while fetching requests.</p>
                      ) : (

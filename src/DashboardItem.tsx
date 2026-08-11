@@ -21,7 +21,7 @@ const DashboardItem = () => {
   return (
     <div>
       <Header/>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p style={{fontFamily: "Arial", textAlign: "center", position: "relative", top: "200px"}}>Loading...</p>}
       {isError && <p>Error occurred while fetching request details.</p>}
       {data && (
         <div>
