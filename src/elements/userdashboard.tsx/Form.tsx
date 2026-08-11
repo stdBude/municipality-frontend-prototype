@@ -54,9 +54,9 @@ const Form = () => {
   return (
     <>
       {isLoading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error creating request</p>
+        <p style={{fontSize: "30px", margin: "0px auto", fontFamily: "Arail", marginBottom: "2px", textAlign: "center", position: "relative",
+          top: "350px"
+        }}>Loading...</p>
       ) : (
       <div>
       <form className="login-form" onSubmit= {onsubmit}>
@@ -83,7 +83,9 @@ const Form = () => {
         <label className="form-label" htmlFor="File">File</label>
         <input className="form-input form-file-input" style={{border: !file ? "1px solid #d41b1b" :""}} type="file" id="File" placeholder="File" onChange={(e) => setFile(e.target.files?.[0] || null)} />
         <button className="form-button" type="submit">Create Request</button>
-        
+        {error ? (
+          <p style={{fontSize: "20px", color: "red", fontFamily: "Arail", marginBottom: "2px"}}>Error creating the request, please fill out all the fields</p>
+        ) : null}
       </form>
     </div>
       )}

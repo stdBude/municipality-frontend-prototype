@@ -34,7 +34,11 @@ const DashboardItem = () => {
               </section>
             </section>
              <section className="request-details data" >
-              <p className="data-p p-">{data.request.typeOfRequest}<strong> :نوع المشكلة</strong> </p>
+              <p className="data-p p-"><a style={{backgroundColor:
+              data.request.typeOfRequest === "Road Crack" ? "rgba(52, 250, 13, 0.24)": data.request.typeOfRequest === "Electricity" ? "rgba(20, 16, 238, 0.29)" :
+              data.request.typeOfRequest === "Water Supply" ? "rgba(233, 229, 13, 0.31)" : data.request.typeOfRequest === "Garbage Collection" ? "rgba(231, 26, 26, 0.27)" : "rgba(14, 10, 10, 0.29)", padding: "5px", borderRadius: "5px",
+              color: data.request.typeOfRequest === "Road Crack" ? "rgb(33, 168, 6)": data.request.typeOfRequest === "Electricity" ? "rgb(14, 12, 180)" :
+              data.request.typeOfRequest === "Water Supply" ? "rgb(233, 229, 13)" : data.request.typeOfRequest === "Garbage Collection" ? "rgb(141, 5, 5)" : "rgb(65, 65, 65)"}}>{data.request.typeOfRequest}</a><strong> :نوع المشكلة</strong> </p>
               <p className="data-p p-"><strong> المنطقة: </strong>{data.request.region} </p>
               <div className="data-p">
                 <a id="description-label"> :الوصف</a>

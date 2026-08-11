@@ -3,12 +3,13 @@ import './Form.css'
 import { useLoginMutation, useAdminLoginMutation } from '../redux/APIs'
 import { useNavigate } from 'react-router-dom'
 
+
 const Form = () => {
     const [username, setUsername] = React.useState('')
     const [password, setPassword] = React.useState('')
  
     const navigate = useNavigate()
-    const [login] = useLoginMutation()
+    const [login, {isLoading, error}] = useLoginMutation()
     const [adminLogin] = useAdminLoginMutation()
 
 
@@ -46,7 +47,17 @@ const Form = () => {
 
   return (
     <div className="login-page">
-      <form className="login-form" onSubmit= {onsubmit}>
+      {isLoading? (<p style={{fontFamily: "Arial", placeContent: "center", placeItems: "center"}}>Loading...</p>): error ? 
+      (<form className="login-form" onSubmit= {onsubmit}>
+        <h1 className="form-title">Login</h1>
+        <label className="form-label" htmlFor="username">Username</label>
+        <input className="form-input" style={{border: !username ? '1px solid #ff0000' : ''}} type="text" id="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <label className="form-label" htmlFor="password">Password</label>
+        <input className="form-input" style={{border: !password ? '1px solid #ff0000' : ''}} type="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button className="form-button" type="submit">Login</button>
+        <p style={{color: "red", fontSize: "20px", fontFamily: "Arial", marginBottom: "2px"}}>Error while login try again</p>
+      </form>)
+      :(<form className="login-form" onSubmit= {onsubmit}>
         <h1 className="form-title">Login</h1>
         <label className="form-label" htmlFor="username">Username</label>
         <input className="form-input" style={{border: !username ? '1px solid #ff0000' : ''}} type="text" id="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -54,7 +65,7 @@ const Form = () => {
         <input className="form-input" style={{border: !password ? '1px solid #ff0000' : ''}} type="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <button className="form-button" type="submit">Login</button>
         
-      </form>
+      </form>)}
     </div>
   )
 }
