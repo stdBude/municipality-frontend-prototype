@@ -35,9 +35,9 @@ const DashboardItem = () => {
   const [getRequests,{data: requestsData , isLoading:requestsIsLoading, isError: requestsIsError}] = useGetByUserMutation()
   const navigate = useNavigate()
   const smallPhone = useMediaQuery({ query : "(min-width: 320px)"})
-  const smallTablet = useMediaQuery({ query : "(min-width: 480px)"})
-  const Tablets = useMediaQuery({ query : "(min-width: 768px)"})
-  const SmallLaptop = useMediaQuery({ query : "(min-width: 1024px)"})
+  // const smallTablet = useMediaQuery({ query : "(min-width: 480px)"})
+  // const Tablets = useMediaQuery({ query : "(min-width: 768px)"})
+  // const SmallLaptop = useMediaQuery({ query : "(min-width: 1024px)"})
   const Desktop = useMediaQuery({ query : "(min-width: 1280px)"})
 
   const handleClickofCard = (_id: string) => {
