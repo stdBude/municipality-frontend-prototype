@@ -8,5 +8,6 @@ body,
 
 body {
   min-height: 100vh;
-  
+  background-color: #F5F3EE;
+  font-family: Calibri;
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Form1.css'
 import { useCreateRequestMutation } from '../redux/APIs'
 import { useParams, useNavigate } from 'react-router-dom'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Form = () => {
     const {id} = useParams()
@@ -54,9 +55,7 @@ const Form = () => {
   return (
     <>
       {isLoading ? (
-        <p style={{fontSize: "30px", margin: "0px auto", fontFamily: "Arail", marginBottom: "2px", textAlign: "center", position: "relative",
-          top: "350px"
-        }}>Loading...</p>
+        <AiOutlineLoading3Quarters className='frame1' size={"50px"} color='rgb(11, 74, 211)'/>
       ) : (
       <div>
       <form className="login-form" onSubmit= {onsubmit}>
@@ -82,7 +81,7 @@ const Form = () => {
         <textarea rows={5} wrap = "soft" style={{border: !description ? "1px solid #d41b1b" :""}} className="form-input" id="Description" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
         <label className="form-label" htmlFor="File">File</label>
         <input className="form-input form-file-input" style={{border: !file ? "1px solid #d41b1b" :""}} type="file" id="File" placeholder="File" onChange={(e) => setFile(e.target.files?.[0] || null)} />
-        <button className="form-button" type="submit">Create Request</button>
+        <button className="form-button2" type="submit">Create Request</button>
         {error ? (
           <p style={{fontSize: "20px", color: "red", fontFamily: "Arail", marginBottom: "2px"}}>Error creating the request, please fill out all the fields</p>
         ) : null}

@@ -1,0 +1,202 @@
+.login-page{
+    min-height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: -50px;
+    padding-top: 110px;
+    box-sizing: border-box;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    background-color: #ffffff;
+    width: 300px;
+    margin: 0 auto;
+    
+    padding: 48px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.473);
+}
+#login-logo{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #d4d1d18f;
+    box-shadow: 0px 0px 10px rgba(97, 97, 97, 0.473);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 50px;
+}
+.logo-order{
+    display: grid;
+    grid-template-columns: 1fr ;
+    place-content: center;
+    place-items: center;
+    margin: 0 auto;
+}
+.form-input{
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border-color: #9c9c9c;
+    background-color: #ffffff ;
+     position: relative;
+    right: 5px;
+   
+}
+.form-input:focus{
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    right: 5px;
+    border-radius: 5px;
+    border-color: #9c9c9c;
+    background-color: #ffffff ;
+}
+.form-button1{
+    font-size: 15px;
+    font-weight: light;
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    color: rgb(211, 179, 0);
+    border: none;
+    position: relative;
+    right: 5px;
+    background-color: hsl(197.09deg 43% 16);
+    padding: 10px ;
+    width: 104%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(73, 73, 73, 0.473);
+    transition: background-color 0.5s, color 0.5s, scale 0.5s, box-shadow 0.5s;
+}
+.form-button1:hover{
+    background-color: hsl(196, 42%, 9%);
+    cursor: pointer;
+    color: rgb(185, 158, 2);
+    box-shadow: 0px 0px 10px rgb(185, 158, 2);
+    scale: 1.02;
+}
+
+.frame{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    position: relative;
+    top: 250px;
+}
+
+@keyframes loading{
+    0% {
+        transform: rotate(0turn);
+    }
+    25% {
+        transform: rotate(0.25turn);
+    }
+    50% {
+        transform: rotate(0.5turn);
+    }
+    75% {
+        transform: rotate(0.75turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+
+}
+.form-title{
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.form-label{
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: lighter;
+     position: relative;
+    right: 5px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+@media (min-width: 320px) and (max-width: 767px){ 
+    .login-page{
+   
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+    }
+    .login-form{
+        padding: 30px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+@media (min-width: 480px) {
+   
+ }
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px){ 
+      .login-page{
+   
+        
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+    }
+    .login-form{
+        padding: 50px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* Small laptops / tablet landscape */
+@media (min-width: 1024px) { 
+     .login-page{
+   
+        margin: 0 auto;
+        position: relative;
+        top: 20px;
+        
+    }
+    .login-form{
+        padding: 40px !important;
+        padding-bottom: 40px !important;
+    } 
+}
+
+/* Desktops */
+@media (min-width: 1280px) { }
+
+/* Large screens */
+@media (min-width: 1440px) { }
+
+/* Extra large / 4K */
+@media (min-width: 1920px) { }
+
+
+@media (max-height: 699px) {
+.login-page{
+   
+       
+        position: relative;
+        top: -150px;
+    }
+    
+}
+
+

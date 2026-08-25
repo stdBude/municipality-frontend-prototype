@@ -1,14 +1,88 @@
-.Header{
-    background-color: #dfc324;
+.will{
+    background-color: hsl(197.09deg 43% 16);
     margin: 0px;
     padding: 20px;
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 5px 20px 10px rgba(73, 73, 73, 0.473);
+    
+    box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.473);
+    margin-top: 0px ;
+    justify-content: start;
+    align-items: start;
+    height: 70px;
     
 }
-p{
-    color: rgb(0, 0, 0);
+
+span{
+    color: rgb(184, 168, 18);
     font-size: 50px;
-    font-family: 'Brush Script MT';
-    font-weight: lighter;
+    font-family: 'Bell MT';
+    font-weight: bold;
+    text-indent: 20px;
+    text-box: 0px 0px 50px rgb(0,0,0);
+   
 }
+
+@media (min-width: 320px) { 
+    span{
+    color: rgb(184, 168, 18);
+    font-size: 35px;
+    font-family: 'Bell MT';
+    font-weight: bold;
+    text-indent: 20px;
+    text-box: 0px 0px 50px rgb(0,0,0);
+}
+   .will{
+  
+    height: 50px;
+    
+}
+
+ }
+@media (min-width: 480px) { 
+    span{
+    color: rgb(184, 168, 18);
+    font-size: 40px;
+    font-family: 'Bell MT';
+    font-weight: bold;
+    text-indent: 20px;
+    text-box: 0px 0px 50px rgb(0,0,0);
+    }
+
+ }
+
+/* Tablets */
+@media (min-width: 768px) { }
+
+/* Small laptops / tablet landscape */
+@media (min-width: 1024px) {
+    .will{
+    background-color: hsl(197.09deg 43% 16);
+    margin: 0px;
+    padding: 20px;
+    
+    box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.473);
+    margin-top: 0px ;
+    justify-content: start;
+    align-items: start;
+    height: 70px;
+    
+}
+
+span{
+    color: rgb(184, 168, 18);
+    font-size: 50px;
+    font-family: 'Bell MT';
+    font-weight: bold;
+    text-indent: 20px;
+    text-box: 0px 0px 50px rgb(0,0,0);
+   
+}
+ }
+
+/* Desktops */
+@media (min-width: 1280px) { }
+
+/* Large screens */
+@media (min-width: 1440px) { }
+
+/* Extra large / 4K */
+@media (min-width: 1920px) { }

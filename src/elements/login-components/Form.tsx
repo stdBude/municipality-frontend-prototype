@@ -1,7 +1,9 @@
 import React from 'react'
-import './Form.css'
+import './Form1.css'
 import { useLoginMutation, useAdminLoginMutation } from '../redux/APIs'
 import { useNavigate } from 'react-router-dom'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { FaBuildingColumns } from "react-icons/fa6";
 
 
 const Form = () => {
@@ -46,28 +48,28 @@ const Form = () => {
         }
         
     }
-
+    
   return (
     <div className="login-page">
-      {isLoadingAll ? (<p style={{fontFamily: "Arial", textAlign: "center"}}>Loading...</p>): error ? 
+      { isLoadingAll ? (<AiOutlineLoading3Quarters className='frame' size={"50px"} color='rgb(11, 74, 211)'/>): 
       (<form className="login-form" onSubmit= {onsubmit}>
-        <h1 className="form-title">Login</h1>
+        <div className='logo-order'>
+          <FaBuildingColumns id ="login-logo"  color="rgb(211, 179, 0)" fontSize={50} />
+          <h1 className="form-title">Login</h1>
+        </div>
         <label className="form-label" htmlFor="username">Username</label>
         <input className="form-input" style={{border: !username ? '1px solid #ff0000' : ''}} type="text" id="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
         <label className="form-label" htmlFor="password">Password</label>
         <input className="form-input" style={{border: !password ? '1px solid #ff0000' : ''}} type="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button className="form-button" type="submit">Login</button>
+        <button className="form-button1" type="submit">Login</button>
+        {error?
         <p style={{color: "red", fontSize: "20px", fontFamily: "Arial", marginBottom: "2px"}}>Error while login try again</p>
+          : null
+      }
       </form>)
-      :(<form className="login-form" onSubmit= {onsubmit}>
-        <h1 className="form-title">Login</h1>
-        <label className="form-label" htmlFor="username">Username</label>
-        <input className="form-input" style={{border: !username ? '1px solid #ff0000' : ''}} type="text" id="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <label className="form-label" htmlFor="password">Password</label>
-        <input className="form-input" style={{border: !password ? '1px solid #ff0000' : ''}} type="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button className="form-button" type="submit">Login</button>
-        
-      </form>)}
+      
+      }
+      
     </div>
   )
 }

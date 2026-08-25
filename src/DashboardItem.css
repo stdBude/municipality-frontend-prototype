@@ -1,25 +1,33 @@
 .request-details {
     display: flex;
     flex-direction: column;
-    flex:1;
-    gap: 10px;
+    
+    
     padding: 20px;
     place-items: center;
     place-content: center;
-    
+    margin-bottom: 20px;
     border-radius: 20px;
 }
 .request-info{
     padding: 35px;
-    background-color: #dfdfdfbd;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(73, 73, 73, 0.473);
+    padding-top: 15px;
+    background-color: #f0efef;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(73, 73, 73);
 }
 img{
     width: 720px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px rgba(7, 7, 7, 0.986);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(63, 63, 63, 0.986);
+}
+#hierarchy{
+    padding-inline: 10px;
+    position: relative;
+    top: 10px;
+    left: 5px;
 }
 h2{
     text-align: right;
@@ -33,14 +41,20 @@ h2{
 }
 .data{
     padding: 35px;
-    background-color: #dfdfdfbd;
+    background-color:  #f0efef;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(73, 73, 73, 0.473);
+    box-shadow: 0px 0px 5px rgba(73, 73, 73);
     width: 720px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: right;
     
 }
+
+.request-details.data {
+    margin-bottom: 20px;
+}
+
 .data p{
     font-family: 'Arabic Typesetting';
     font-size: 35px;
@@ -61,16 +75,25 @@ h2{
 }
 #description-label{
    margin-bottom: 0px;
-   padding: 0px;
+   padding-inline: 0px;
+   
 }
 .data-p{
     width: 700px;
     height: auto;
     overflow-y: auto;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #ffffffbd;
-    box-shadow: 0px 0px 5px rgba(73, 73, 73, 0.473);
+    padding: 5px;
+    border-radius: 5px;
+    
+    box-shadow: 0px 0px 5px rgba(68, 68, 68, 0.473);
+}
+#type-display1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    display: inline;
+    text-align: center;
+    font-size: 30px;
 }
 .data-p{
     margin-top: 0px;
@@ -80,3 +103,492 @@ a{
     font-size: 35px;
     font-weight: bold;
 }
+.frame3{
+    animation-name: loading3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 50%;
+    position: relative;
+    top: 400px;
+}
+
+.full-frame{
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0px 0px 5px rgb(46, 46, 46);
+    width: 850px;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+@keyframes loading3{
+    0% {
+        transform: rotate(0turn);
+    }
+    25% {
+        transform: rotate(0.25turn);
+    }
+    50% {
+        transform: rotate(0.5turn);
+    }
+    75% {
+        transform: rotate(0.75turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+
+}
+.icon-dataitem-side{
+    margin-right: 2px;
+    display: inline;
+    padding-inline: 1px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+#description-icon{
+    margin-right: 2px;
+    display: inline;
+    padding-inline: 1px;
+   
+}
+#icon-calender{
+    display: inline;
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    
+}
+#calender-text{
+    display : inline;
+    
+}
+
+#container-of-calender{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 15px;
+    color: rgb(114, 114, 114);
+}
+
+.The-Order-Items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.details-of-user{
+    background-color: #f0f0f0;
+    width: 100%;
+    margin-top: 50px;
+    height: 400px;
+    margin-bottom: 50px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0px 0px 5px rgb(73, 73, 73);
+}
+
+#data-of-title{
+    position: relative;
+    left: 56%;
+}
+.frame-of-details{
+    width: 100%;
+    position: relative;
+    
+}
+.order-of-details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    direction: rtl;
+    width: 50%;
+    justify-content: end;
+    gap: 0px;
+    position: relative;
+    left: 60px;
+    margin-top: 30px;
+}
+
+.order-of-details> div{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: auto;
+}
+.title-of-details{
+    width: 150px;
+    
+    align-items: center;
+}
+.title-of-details > span{
+    color: #0e0d0db7;
+    border: 1px solid;
+    border-color: rgba(87, 87, 87, 0.438) rgba(114, 114, 114, 0) rgba(114, 114, 114, 0) rgba(114, 114, 114, 0);
+    font-size: 25px;
+    font-family: 'Arabic Typesetting';
+     
+}
+.details-of-details > span{
+    color: #0e0d0da4;
+    
+    font-size: 25px;
+    font-family: 'Arabic Typesetting';
+    align-items: center;
+    
+}
+.icons-of-details{
+    color: #0e0d0da4;
+}
+.details-of-details{
+    align-items: center;
+}
+.items-of-user img{
+    width: 350px;
+    
+}
+.order-of-cards{
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    place-items:safe  center;
+    place-content:safe  center;
+    gap: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    top: 20px;
+    overflow-x: auto;
+    mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 2.5%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 2.5%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.order-of-cards {
+  overflow-y: scroll;
+  scrollbar-gutter: stable; /* optional, see note below */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.order-of-cards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.order-of-cards::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.order-of-cards:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.order-of-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.order-of-cards-1{
+margin-left: 40px;
+}
+.items-of-user{
+    margin-top: 50px;
+    background-color: #f0efef;
+    box-shadow: 0 0 5px rgb(85, 85, 85);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: right;
+    transition: box-shadow 0.5s , scale 0.5s;
+}
+#title-of-card{
+    font-family: 'Arabic Typesetting';
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 1px;
+    margin-top: 4px;
+    
+}
+#typeOfRequest-of-card{
+    font-family: 'Arabic Typesetting';
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    background-color: var(--bg);
+    color: var(--color1);
+    display: inline;
+    padding-inline: 10px;
+    border-radius: 5px;
+}
+
+#createdAt-of-card-icon{
+    margin: 0;
+    margin-top:  10px;
+    margin-left: 10px;
+    display: inline;
+}
+#createdAt-of-card{
+    margin: 0;
+    margin-top:  10px;
+}
+#createdAt-of-card-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-items: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.521);
+}
+#description-of-card{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.items-of-user:hover{
+    scale: 1.05;
+    box-shadow: 0 0 10px hsl(197.09deg 43% 16);
+    cursor: pointer;
+}
+.order-of-cards-1{
+    background-color: #f0efef;
+    box-shadow: 0 0 10px black;
+    width: 98%;
+    margin: 0 auto;
+}
+.framing{
+    width: 100%;
+    margin: 0 auto;
+    display: contents;
+}
+
+.items-of-user{
+    width: 80% !important;
+    margin: 30px auto;
+}
+.wrapper{
+    background-color: rgb(231, 231, 231);
+    box-shadow: 0 0 10px rgb(46, 46, 46);
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 10px
+}
+.order-of-cards {
+    /* keep all your existing overflow/scroll/mask properties here */
+    overflow-x: auto;
+    overflow-y: scroll;
+    width: 100%; /* fills the wrapper now */
+    /* remove box-shadow from here */
+}
+.cards-row {
+    display: flex;
+    flex-direction: row;      /* only the cards scroll horizontally */
+    overflow-x: auto;
+    gap: 30px;
+}
+
+@media (min-width: 320px) and (max-width: 767px){ 
+    .The-Order-Items{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .full-frame{
+        width: 90%;
+        padding-bottom: 30px;
+    }
+    .request-info{
+        width: 100%;
+        position: static;
+        box-sizing: border-box;
+        margin: 5px auto;
+    }
+    .request-info h2{
+        font-size:30px;
+        display: block !important;
+        position: relative;
+        left: 0 !important;
+        right: 0 !important;
+        
+       width: 100%;
+    }
+    .request-info img{
+        width: 100%;
+        
+    }
+    .data{
+        width: 90% !important;
+        place-items: stretch !important;
+        place-content: stretch !important;
+        margin: 0 auto;
+        padding: 0; 
+        
+    }
+    .request-details{
+        
+        place-items: stretch !important;
+        place-content: stretch !important;
+        margin: 0 auto;
+        
+    }
+    #here{
+        width: 100%;
+        
+        margin: 0 auto;
+    }
+    .data p{
+        width: 90%;
+        box-sizing: border-box;
+        margin: 5px auto;
+        margin-top: 20px;
+    }
+    .data-p{
+         width: 90%;
+        box-sizing: border-box;
+        margin: 5px auto;
+        margin-top: 20px;
+    }
+    .data-p:last-child{
+        margin-bottom: 20px;
+    }
+    a{
+        font-size: 30px;
+    }
+    #type-display1 {
+        font-size: 20px;
+    }
+    #hierarchy{
+        left: 10px;
+        top: 4px;
+    }
+    .icon-dataitem-side{
+        position: relative;
+        left: 20px;
+    }
+    #description-icon{
+        position: relative;
+        top: 5px;
+    }
+    .details-of-user{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+        place-content: center;
+        place-items: center;
+        margin-bottom: 30px;
+        height: 300px;
+        
+    }
+   .details-of-user span{
+        font-size: 17px;
+   }
+    .order-of-details{
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    #data-of-title{
+        position: relative;
+        left: 0;
+        
+        text-align: right;
+        width: 80%;
+        margin-top: 5px;
+    }
+    .order-of-cards{
+        /* flex-direction: row; */
+        height: 400px;
+        top: 0;
+         display: flex;
+        flex-direction: column;   /* h1 on top, cards row below */
+        overflow-x: visible;
+        overflow-y: hidden;
+        margin-top: 10px;
+        gap: 0;
+        margin: 0 auto;
+    }
+    .wrapper{
+        overflow-y: hidden;
+        overflow-x: hidden;
+        margin-bottom: 0;
+    }
+    .items-of-user img{
+        width: 200px;
+    }
+    .order-of-cards h1{
+        flex: 0 0 auto;
+        margin-bottom: 0;
+    }
+    .framing {
+        margin: 0 auto;
+        display: flex;             /* .framing itself becomes the scroll row now */
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 5px;
+        width: 90%;
+
+        /* move your mask-image / scrollbar styling here instead of .order-of-cards */
+    }
+    .items-of-user{
+        height: 250px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+        .order-of-cards {
+        mask-image: none;        /* cancel the vertical mask here */
+        -webkit-mask-image: none;
+    }
+
+    .framing {
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+        );
+    }
+
+}
+
+@media (min-width: 480px) {
+   
+ }
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px){ 
+}
+
+/* Small laptops / tablet landscape */
+@media (min-width: 1024px) { 
+   
+}
+
+/* Desktops */
+@media (min-width: 1280px) { }
+
+/* Large screens */
+@media (min-width: 1440px) { }
+
+/* Extra large / 4K */
+@media (min-width: 1920px) { }
