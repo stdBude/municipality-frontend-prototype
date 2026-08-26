@@ -458,8 +458,8 @@ button.unactivated {
     }
     .button-of-enter{
         margin-top: 5px;
-        padding-inline: 30px;
-        font-size: 22px;
+        padding-inline: 25px;
+        font-size: 17px;
     }
     .sidebar h2{
         position: relative;

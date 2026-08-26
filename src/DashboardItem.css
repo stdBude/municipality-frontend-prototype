@@ -10,6 +10,7 @@
     border-radius: 20px;
 }
 .request-info{
+    width: 80%;
     padding: 35px;
     padding-top: 15px;
     background-color: #f0efef;
@@ -18,11 +19,12 @@
     box-shadow: 0px 0px 5px rgba(73, 73, 73);
 }
 img{
-    width: 720px;
+    width:100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(63, 63, 63, 0.986);
 }
+
 #hierarchy{
     padding-inline: 10px;
     position: relative;
@@ -44,7 +46,8 @@ h2{
     background-color:  #f0efef;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(73, 73, 73);
-    width: 720px;
+    width: 87%;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     text-align: right;
@@ -61,7 +64,7 @@ h2{
     font-weight: lighter;
     margin-top: 15px;
     text-align: right;
-    width: 700px;
+    width: 100%;
     margin-bottom: 3px;
 }
 .data strong{
@@ -79,14 +82,16 @@ h2{
    
 }
 .data-p{
-    width: 700px;
+    width: 100%;
     height: auto;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     padding: 5px;
     border-radius: 5px;
     
     box-shadow: 0px 0px 5px rgba(68, 68, 68, 0.473);
 }
+
+
 #type-display1 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -116,7 +121,7 @@ a{
 .full-frame{
     background-color: rgb(236, 236, 236);
     box-shadow: 0px 0px 5px rgb(46, 46, 46);
-    width: 850px;
+    width: 100%;
     margin: 50px auto;
     border-radius: 10px;
     padding-bottom: 10px;
@@ -178,7 +183,7 @@ a{
 
 .The-Order-Items{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 1.7fr 1fr;
     gap: 30px;
 }
 
@@ -198,18 +203,19 @@ a{
 }
 .frame-of-details{
     width: 100%;
-    position: relative;
+    position: static;
     
 }
 .order-of-details{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 2fr 2fr;
     direction: rtl;
     width: 50%;
     justify-content: end;
     gap: 0px;
     position: relative;
-    left: 60px;
+    margin: 0 auto;
+    margin-right: 0;
     margin-top: 30px;
 }
 
@@ -220,7 +226,7 @@ a{
     height: auto;
 }
 .title-of-details{
-    width: 150px;
+    width: 100%;
     
     align-items: center;
 }
@@ -247,7 +253,7 @@ a{
     align-items: center;
 }
 .items-of-user img{
-    width: 350px;
+    width: 100%;
     
 }
 .order-of-cards{
@@ -262,6 +268,7 @@ a{
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
+    
     position: relative;
     top: 20px;
     overflow-x: auto;
@@ -378,11 +385,13 @@ margin-left: 40px;
 .items-of-user{
     width: 80% !important;
     margin: 30px auto;
+  
 }
 .wrapper{
     background-color: rgb(231, 231, 231);
     box-shadow: 0 0 10px rgb(46, 46, 46);
     width: 90%;
+    box-sizing: border-box;
     margin: 50px auto;
     border-radius: 10px
 }
@@ -399,8 +408,12 @@ margin-left: 40px;
     overflow-x: auto;
     gap: 30px;
 }
-
-@media (min-width: 320px) and (max-width: 767px){ 
+ .request-info h2{
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+ }
+@media (min-width: 320px) and (max-width: 1279px){ 
     .The-Order-Items{
         display: flex;
         flex-direction: column;
@@ -425,9 +438,24 @@ margin-left: 40px;
         
        width: 100%;
     }
+    #data-of-title{
+        font-size: 35px;
+    }
+    #description-of-card{
+        font-size: 13px;
+    }
+    #description-label{
+        font-size: 22px;
+    }
     .request-info img{
         width: 100%;
         
+    }
+    #typeOfRequest-of-card{
+        font-size: 15px;
+    }
+    #title-of-card{
+        font-size: 17px;
     }
     .data{
         width: 90% !important;
@@ -576,7 +604,10 @@ margin-left: 40px;
  }
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 1023px){ 
+@media (min-width: 768px) and (max-width: 1279px){
+   .details-of-user{
+    width: 70%;
+   }
 }
 
 /* Small laptops / tablet landscape */

@@ -124,7 +124,7 @@ const Main = () => {
     <div className='align'>
         <div className="sidebar-header">
             <section className="sidebar">
-                <h2 style={{fontFamily:"Arial, Helvetica, sans-serif", fontSize:"40px", marginLeft:"10%"}}>الفلترة</h2>
+                <h2 style={{fontFamily:"Arial, Helvetica, sans-serif", fontSize:Desktop?"40px": smallPhone? "30px":"35px", marginLeft:"10%"}}>الفلترة</h2>
                 <div className="filter">
                     <div className="filter-item">
                         <input type="text" className='filter-input' id="filter" name="filter" placeholder="Region" value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)} />

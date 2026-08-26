@@ -136,16 +136,16 @@ const DashboardItem = () => {
                   color: data.request.typeOfRequest === "Road Crack" ? "rgb(33, 168, 6)": data.request.typeOfRequest === "Electricity" ? "rgb(184, 181, 12)" :
                   data.request.typeOfRequest === "Water Supply" ? "rgb(14, 12, 180)" : data.request.typeOfRequest === "Garbage Collection" ? "rgb(141, 5, 5)" : "rgb(65, 65, 65)"}}>{data.request.typeOfRequest}</span>
                   <VscTypeHierarchySub id="hierarchy" size={Desktop? "30px":smallPhone?"25px":"30px"} />
-                  <strong style={{fontSize:Desktop? "35px":smallPhone? "30px":"35px"}}> :نوع المشكلة</strong> </p>
-                  <div className='data-p' style={{marginTop:"15px"}}>
+                  <strong style={{fontSize:Desktop? "35px":smallPhone? "22px":"35px"}}> :نوع المشكلة</strong> </p>
+                  <div className='data-p' style={{marginTop:"15px", position:"static", left: "0", right:"0"}}>
                     <MdPlace size={Desktop? "30px":smallPhone?"25px":"30px"} className='icon-dataitem-side'/>
-                    <span style= {{paddingTop:"0px",display:"inline-block",marginTop: "0px",fontFamily: 'Arabic Typesetting',color:"rgba(0,0,0,0.7)", fontSize:Desktop? "35px":smallPhone? "30px":"35px", fontWeight:"bold"}}>المنطقة</span>
-                    <p style={{paddingTop:"0px",display:"inline-block",marginTop: "0px",fontFamily: 'Arabic Typesetting',color:"rgba(0,0,0,0.7)", fontSize:Desktop? "30px":smallPhone? "25px":"30px", fontWeight:"lighter"}}>{data.request.region} </p>
+                    <span style= {{paddingTop:"0px",display:"inline-block",marginTop: "0px",fontFamily: 'Arabic Typesetting',color:"rgba(0,0,0,0.7)", fontSize:Desktop? "35px":smallPhone? "22px":"35px", fontWeight:"bold"}}>المنطقة</span>
+                    <p style={{paddingTop:"0px",position: "static",display:"inline-block",marginTop: "0px",fontFamily: 'Arabic Typesetting',color:"rgba(0,0,0,0.7)", fontSize:Desktop? "30px":smallPhone? "17px":"30px", fontWeight:"lighter"}}>{data.request.region} </p>
                   </div>
                   <div className="data-p" style={{marginTop : "15px"}}>
                     <MdDescription  size={Desktop? "27px":smallPhone?"25px":"27px"} id="description-icon"/>
                     <a id="description-label"> الوصف</a>
-                    <p style={{color:"rgba(0,0,0,0.7)",padding: "0", width: "100%", fontSize:Desktop? "30px":smallPhone? "20px":"30px"}}>{data.request.description} </p>
+                    <p style={{color:"rgba(0,0,0,0.7)",padding: "0", width: "100%", fontSize:Desktop? "30px":smallPhone? "17px":"30px"}}>{data.request.description} </p>
                   </div>
               </section>
               </section>
