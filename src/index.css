@@ -11,3 +11,8 @@ body {
   background-color: #F5F3EE;
   font-family: Calibri;
 }
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
