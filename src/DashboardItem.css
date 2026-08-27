@@ -199,6 +199,7 @@ a{
     width: 100%;
     margin-top: 50px;
     height:fit-content;
+    padding-bottom: 1px;
     margin-bottom: 50px;
     border-radius: 10px 0 0 10px;
     box-shadow: 0px 0px 5px rgb(73, 73, 73);
@@ -217,7 +218,7 @@ a{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     direction: rtl;
-    width: 50%;
+    width: fit-content;
     justify-content: end;
     gap: 0px;
     position: relative;
@@ -226,12 +227,7 @@ a{
     margin-top: 30px;
 }
 
-.order-of-details> div{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    height: auto;
-}
+
 .title-of-details{
     width: 100%;
     
@@ -243,7 +239,8 @@ a{
     border-color: rgba(87, 87, 87, 0.438) rgba(114, 114, 114, 0) rgba(114, 114, 114, 0) rgba(114, 114, 114, 0);
     font-size: 25px;
     font-family: 'Arabic Typesetting';
-     
+     margin-top: 10px;
+     margin-bottom: 10px;
 }
 .details-of-details > span{
     color: #0e0d0da4;
@@ -255,9 +252,19 @@ a{
 }
 .icons-of-details{
     color: #0e0d0da4;
+    place-items: center;
+    place-content: center;
 }
 .details-of-details{
     align-items: center;
+    
+}
+.order-of-details > div{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row: 1 / span 4;
+    grid-template-rows: subgrid;
+    height: auto;
 }
 .items-of-user img{
     width: 100%;
@@ -524,7 +531,7 @@ margin-left: 40px;
         place-content: center;
         place-items: center;
         margin-bottom: 30px;
-        height: 300px;
+        height: fit-content;
         
     }
    .details-of-user span{
@@ -607,7 +614,12 @@ margin-left: 40px;
             transparent 100%
         );
     }
-
+    .title-of-details > span{
+        font-size: 15px;
+    }
+    .details-of-details > span{
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 480px) {
