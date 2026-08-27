@@ -154,10 +154,10 @@ const DashboardItem = () => {
                 <div className='frame-of-details' >
                   <div className='order-of-details'  style={{backgroundColor:"#ffffff", width:"75%", padding:"20px", borderRadius:"20px", boxShadow:"0 0 5px rgb(97, 97, 97)"}}>
                     <div className='icons-of-details'>
-                      <VscTypeHierarchySub size={Desktop?"35px" :smallPhone?"25px" :"35px"}/>
-                      <MdPlace  size={Desktop?"35px" :smallPhone?"25px" :"35px"}/>
-                      <SlCalender  size={Desktop?"30px" :smallPhone?"22px" :"30px"} />
-                      <FaRegUser size={Desktop?"30px" :smallPhone?"22px" :"30px"} />
+                      <VscTypeHierarchySub size={Desktop?"32px" :smallPhone?"25px" :"35px"}/>
+                      <MdPlace  size={Desktop?"32px" :smallPhone?"25px" :"35px"}/>
+                      <SlCalender  size={Desktop?"28px" :smallPhone?"22px" :"30px"} />
+                      <FaRegUser size={Desktop?"28px" :smallPhone?"22px" :"30px"} />
                     </div>
                     <div className='title-of-details'>
                       <span>النوع</span>

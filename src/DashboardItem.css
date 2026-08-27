@@ -639,10 +639,22 @@ margin-left: 40px;
 }
 
 /* Desktops */
-@media (min-width: 1280px) { }
+@media (min-width: 1280px) and (max-width: 1919px){
+    .details-of-details span{
+        font-size: 17px;
+    }
+    .title-of-details span{
+        font-size: 17px;
+    }
+ }
 
 /* Large screens */
 @media (min-width: 1440px) { }
 
 /* Extra large / 4K */
-@media (min-width: 1920px) { }
+@media (min-width: 1920px) { .details-of-details span{
+        font-size: 25px;
+    }
+    .title-of-details span{
+        font-size: 25px;
+    }}

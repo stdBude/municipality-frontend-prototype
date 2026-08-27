@@ -592,7 +592,7 @@ button.unactivated {
  }
 
 /* Desktops */
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1919px){
     .icons{
         margin-top: 25px;
         margin-bottom: 5px;
@@ -600,10 +600,17 @@ button.unactivated {
     .statistics{
         margin-top: 30px;
     }
+    .button-of-enter{
+        font-size: 15px;
+        padding-inline: 20px;
+    }
  }
 
 /* Large screens */
 @media (min-width: 1440px) { }
 
 /* Extra large / 4K */
-@media (min-width: 1920px) { }
+@media (min-width: 1920px) { .statistics{
+        margin-top: 30px;
+    }
+ }
