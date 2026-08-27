@@ -12,7 +12,7 @@ import { IoWater } from "react-icons/io5";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { IoChatboxEllipses } from "react-icons/io5";
 import { useMediaQuery } from 'react-responsive'
-import { CgSmartphone } from 'react-icons/cg'
+
 
 type Request = {
     
