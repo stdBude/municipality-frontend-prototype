@@ -3,6 +3,7 @@ import './Form1.css'
 import { useCreateRequestMutation } from '../redux/APIs'
 import { useParams, useNavigate } from 'react-router-dom'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { FaBuildingColumns } from "react-icons/fa6";
 
 const Form = () => {
     const {id} = useParams()
@@ -58,7 +59,8 @@ const Form = () => {
         <AiOutlineLoading3Quarters className='frame1' size={"50px"} color='rgb(11, 74, 211)'/>
       ) : (
       <div>
-      <form className="login-form" onSubmit= {onsubmit}>
+      <form className="login-form1" onSubmit= {onsubmit}>
+        <FaBuildingColumns id ="login-logo2"  color="rgb(211, 179, 0)" fontSize={50} />
         <h1 className="form-title">Creat Request</h1>
         <label className="form-label" htmlFor="Title">Title</label>
         <input className="form-input" style={{border: !title ? "1px solid #d41b1b" :""}} type="text" id="Title" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />

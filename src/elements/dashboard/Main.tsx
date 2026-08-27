@@ -170,9 +170,9 @@ const Main = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='statisics-by-type' >
+                    <div className='statisics-by-type' style={{position:"relative"}}>
                        <p style ={{fontWeight:"bold", display: "inline-block", marginBottom : "7px", marginLeft:smallPhone?  "20px" : "" }}>تعداد بالنوع</p>
-                       <IoChatboxEllipses style={{display: "inline-block", position:"relative", left:Desktop? "32%":Tablets? "13%":smallPhone?"22%" : "32%", top: "3%" }} size ={Desktop? "35px":Tablets? "22px" :smallPhone? "25px": "35px"} />
+                       <IoChatboxEllipses id= "message" style={{display: "inline-block", position:"absolute", left:Desktop? "90%":Tablets? "13%":smallPhone?"22%" : "32%", top: "7%" }} size ={Desktop? "35px":Tablets? "22px" :smallPhone? "25px": "35px"} />
                        { countsLoading? <p>loading</p>: countsError ? <p>error</p>: countsData?(<div className='type-whole'>
                         
                         <div className='type-ind'>
@@ -219,6 +219,7 @@ const Main = () => {
                     </div>
                 </div>
                 <section className="table-header " >
+                    
                     <p className='cell'>النوع</p>
                     {Tablets ? <p className='cell'>المنطقة</p> :smallPhone? null:
                     <p className='cell'>المنطقة</p>}
@@ -227,7 +228,9 @@ const Main = () => {
                     {Tablets ?<p className='cell'>الوصف</p> :smallPhone? null:
                     <p className='cell'>الوصف</p>}
                     <p className='cell'>الصورة</p>
+                    
                 </section>
+                
                 <div className= "whole">
                     {requestsLoading ? (
                         <AiOutlineLoading3Quarters className='frame2' size={"50px"} color='rgb(11, 74, 211)'/>

@@ -11,6 +11,8 @@ import { IoTrashBinSharp } from "react-icons/io5";
 import { IoWater } from "react-icons/io5";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { IoChatboxEllipses } from "react-icons/io5";
+import { useMediaQuery } from 'react-responsive'
+import { CgSmartphone } from 'react-icons/cg'
 
 type Request = {
     
@@ -35,6 +37,11 @@ const UserData = () => {
     const [totalPages, setTotalPages] = useState<number>(0)
     const [currentStatePage, setCurrentStatePage] = useState<number[]>([])
     const [pressed, setPressed] = useState<boolean[]>([false,false])
+    const smallPhone = useMediaQuery({ query : "(min-width: 320px)"})
+      const smallTablet = useMediaQuery({ query : "(min-width: 480px)"})
+    const Tablets = useMediaQuery({ query : "(min-width: 768px)"})
+    const SmallLaptop = useMediaQuery({ query : "(min-width: 1024px)"})
+    const Desktop = useMediaQuery({ query : "(min-width: 1280px)"})
     
     
    useEffect(() =>{
@@ -89,10 +96,10 @@ const UserData = () => {
                                     
                                     <div className='statisics-by-type1' >
                                        <p style ={{fontWeight:"bold", display: "inline-block", marginBottom : "7px" }}> تعداد بالنوع </p>
-                                       <IoChatboxEllipses style={{display: "inline-block", position:"relative", left: "41%", top: "3%"}} size = "35px" />
+                                       <IoChatboxEllipses style={{display: "inline-block", position:"absolute", left:Desktop?"77vw" :Tablets?"83vw": smallPhone? "77vw": "77vw", top: "2vh"}} size = {Tablets?"35px" : smallPhone? "25px" :"35px"} />
                                        { countsLoading? <p>loading</p>: countsError ? <p>error</p>: countsData?(<div className='type-whole1' >
                                         
-                                        <div className='type-ind'>
+                                        <div className='type-ind1'>
                                             <BsLightningChargeFill className='icons1' size = "35px" color='rgb(233, 229, 13)'/>
                                             <p style = {{fontWeight:"bold" , color: "rgb(179 178 178)", display: 'inline', position:"relative", top:"10px"}}>Electricity</p>
                                             <p style = {{fontWeight:"bold", fontSize: "40px", position:"relative", top:"10px", marginBottom: "2px",marginTop: "2px" }}>{countsData.electricity}</p>
@@ -108,7 +115,7 @@ const UserData = () => {
                                                 <div className="progress-bar1" style={{"--progress": `${countsData.roadCrack/countsData.theWhole*100}%`, "--color": "rgb(33, 168, 6)"} as React.CSSProperties}></div>
                                             </div>
                                         </div>
-                                        <div className='type-ind'>
+                                        <div className='type-ind1'>
                                             <IoWater className='icons1' size = "35px" color="rgb(25, 21, 219)"/>
                                             <p style = {{fontWeight:"bold" , color: "rgb(179 178 178)", display: 'inline', position:"relative", top:"10px"}}>Water Supply</p>
                                             <p style = {{fontWeight:"bold", fontSize: "40px", position:"relative", top:"10px",  marginBottom: "2px",marginTop: "2px" }}>{countsData.waterSupply}</p>
@@ -124,7 +131,7 @@ const UserData = () => {
                                                 <div className="progress-bar1" style={{"--progress": `${countsData.garbageCollection/countsData.theWhole*100}%`, "--color": "rgb(206, 5, 5)"} as React.CSSProperties}></div>
                                             </div>
                                         </div>
-                                        <div className='type-ind'>
+                                        <div className='type-ind1'>
                                             <HiDotsHorizontal className='icons1' size = "35px" color="#1b1b1b"/>
                                             <p style = {{fontWeight:"bold" , color: "rgb(179 178 178)", display: 'inline', position:"relative", top:"10px"}}>Other</p>
                                             <p style = {{fontWeight:"bold", fontSize: "40px", position:"relative", top:"10px",marginBottom: "2px",marginTop: "2px" }}>{countsData.other}</p>
@@ -138,8 +145,15 @@ const UserData = () => {
              <div className="table-order-user">
                  <section className="table-header-user " >
                      <p className='cell-user'>النوع</p>
-                     <p className='cell-user'>المنطقة</p>
-                     <p className='cell-user'>الوصف</p>
+                     {Desktop || Tablets?
+                     (<div className= "cont"><p className='cell-user'>المنطقة</p>
+                        <p className='cell-user'>الوصف</p>
+                     </div>)
+                     :smallPhone? null : 
+                     (<div className= "cont"><p className='cell-user'>المنطقة</p>
+                        <p className='cell-user'>الوصف</p>
+                     </div>)
+                     }
                      <p className='cell-user'>العنوان</p>
                      <p className='cell-user'>الصورة</p>
                  </section>
@@ -152,19 +166,28 @@ const UserData = () => {
                          data?.request?.map((request:  Request) => (
                              <section className="request-card-user" onClick={() =>handleClick(request._id)} key={request._id}>
                                  <div className="table-row-user">
-                                     <p className='cell-user ' style={{fontSize : "25px", backgroundColor:
+                                     <p className='cell-user ' style={{fontSize : Desktop?"25px": Tablets? "15px": smallPhone? "12px":"25px", backgroundColor:
                                      request.typeOfRequest === "Road Crack" ? "rgba(52, 250, 13, 0.24)": request.typeOfRequest === "Electricity" ? "rgba(233, 229, 13, 0.29)" :
                                      request.typeOfRequest === "Water Supply" ? "rgba(24, 21, 219, 0.27)" : request.typeOfRequest === "Garbage Collection" ? "rgba(231, 26, 26, 0.27)" : "rgba(14, 10, 10, 0.29)", padding: "5px", borderRadius: "5px",
                                      color: request.typeOfRequest === "Road Crack" ? "rgb(33, 168, 6)": request.typeOfRequest === "Electricity" ? "rgb(187, 184, 12)" :
                                      request.typeOfRequest === "Water Supply" ? "rgba(24, 21, 219, 1)" : request.typeOfRequest === "Garbage Collection" ? "rgb(141, 5, 5)" : "rgb(65, 65, 65)"}}>{request.typeOfRequest}</p>
-                                     <p className='cell-user' style={{fontSize : "25px"}}>{request.region}</p>
-                                     
-                                     {request.description.slice(0, 20) < request.description ?
-                                    (<p className='cell' style={{fontSize : "20px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
-                                    (<p className='cell' style={{fontSize : "20px", color: "rgb(32, 32, 32)"}}>{request.description.slice(0, 20)}</p>)
+                                     {
+                                        Desktop || Tablets?
+                                    <div className='cont'>
+                                        <p className='cell-user' style={{fontSize :Desktop?"30px": Tablets? "25px": "25px"}}>{request.region}</p>
+                                        {request.description.slice(0, 20) < request.description ?
+                                        (<p className='cell' style={{fontSize : Desktop?"20px": Tablets? "15px": "20px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
+                                        (<p className='cell' style={{fontSize : Desktop?"20px": Tablets? "15px": "20px", color: "rgb(32, 32, 32)"}}>{request.description.slice(0, 20)}</p>)}
+                                    </div>: smallPhone? null:
+                                    <div className='cont'>
+                                        <p className='cell-user' style={{fontSize : Desktop?"30px": Tablets? "25px": "25px"}}>{request.region}</p>
+                                        {request.description.slice(0, 20) < request.description ?
+                                        (<p className='cell' style={{fontSize : Desktop?"20px": Tablets? "15px": "20px", color: "rgb(34, 34, 34)"}}>...{request.description.slice(0, 20)}</p>):
+                                        (<p className='cell' style={{fontSize : Desktop?"20px": Tablets? "15px": "20px", color: "rgb(32, 32, 32)"}}>{request.description.slice(0, 20)}</p>)}
+                                    </div>
                                     }
                                     {request.title.slice(0, 8)< request.title ? 
-                                    (<p className='cell-user cell-head-user' style={{ padding: "15px", fontWeight: "bolder"  }} >
+                                    (<p className='cell-user cell-head-user' style={{ fontSize : Desktop?"30px": Tablets? "25px": "20px",padding: "15px", fontWeight: "bolder"  }} >
                                             ...{request.title.slice(0, 8)}
                                     </p>) : (<p className='cell-user cell-head-user' style={{ padding: "15px", fontWeight: "bolder"  }} >
                                             {request.title.slice(0, 8)}

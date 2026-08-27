@@ -86,7 +86,7 @@ const DashboardItem = () => {
               <div className='order-of-cards'>
                 <h1 style={{marginBottom: "10px"}}>طلبات</h1> 
               {
-                requestsIsLoading ? <AiOutlineLoading3Quarters className='frame3' size={"50px"} color='rgb(11, 74, 211)'/>
+                requestsIsLoading ? <AiOutlineLoading3Quarters className='frame4' size={"30px"} color='rgb(11, 74, 211)' style={{margin: "0 auto"}}/>
                 : requestsIsError ? <p>error fetching content</p> :
                 (
                    <div className='framing'>

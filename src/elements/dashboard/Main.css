@@ -8,7 +8,7 @@
     background-color: hsl(197.09deg 43% 16);
     color: rgb(184, 168, 18);
     width:17%;
-    height: 210px;
+    height: fit-content;
     border-radius: 30px;
     position: relative;
     left: 30px;
@@ -58,9 +58,12 @@
     height: 120px;
     place-items: center;
     place-content: center;
+    
     box-shadow: 0px 0px 10px rgb(128, 128, 128);
     color: rgb(184, 168, 18);
+    
 }
+
 .table-header p{
     place-items: center;
     place-content: center;
@@ -111,12 +114,17 @@
 .request-card  .table-row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
-  
+    width: 85% !important;
     
     place-content: center;
     place-items: center;
     
    
+}
+#message{
+    display: inline-block;
+    position: absolute;
+    
 }
 .table-row{
     width: 97% !important;
@@ -309,6 +317,7 @@ button.unactivated {
     margin-top: 15px;
     font-family: "Arabic Typesetting";
     font-weight: bold;
+    margin-bottom: 25px;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.459);
     box-shadow: 0 0 5px rgb(7, 7, 7);
@@ -353,11 +362,14 @@ button.unactivated {
         margin-top: 0px !important;
         left: -0px;
         top: 25px;
-        height: 230px;
+        height: fit-content;
        
     }
     .filter-input{
         height: 20px;
+    }
+    #message{
+        left: 89% !important;
     }
     .statistics{
        
@@ -460,6 +472,7 @@ button.unactivated {
         margin-top: 5px;
         padding-inline: 25px;
         font-size: 17px;
+        margin-bottom: 25px;
     }
     .sidebar h2{
         position: relative;
@@ -493,7 +506,7 @@ button.unactivated {
     }
     .button-of-enter {
         position: relative;
-        left: 80px;
+        left: 60%;
         margin-top: 9px;
     }
     .filter-input {

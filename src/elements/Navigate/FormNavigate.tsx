@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import "./FormNavigate.css"
+import { FaBuildingColumns } from "react-icons/fa6";
 
 interface Props{
     idValue : string
@@ -17,13 +18,14 @@ const FormNavigate = ({idValue}:Props) => {
   return (
     <div className="form-navigate-div">
         <section className="form-navigate">
-            <h2 id="navigate-header" >Choose link</h2>
-            <div className="div-form-mechanism">
-                <div className="div-form-mechanism-piece">
+            <FaBuildingColumns id ="login-logo1"  color="rgb(211, 179, 0)" fontSize={50} />
+            <h2 id="navigate-header" style={{marginTop:"0px",marginBottom:"0"}}>Choose link</h2>
+            <div className="div-form-mechanism"style={{marginTop:"40px", paddingTop:"0"}}>
+                <div className="div-form-mechanism-piece"style={{marginTop:"0", paddingTop:"0"}} >
                     <label className="div-form-label" htmlFor="user-data"> User Data Creation</label>
                     <button className="div-form-button" onClick={handleUser}> Enter</button>
                 </div>
-                <div className="div-form-mechanism-piece">
+                <div className="div-form-mechanism-piece div-form-margin" >
                     <label className="div-form-label" htmlFor="userdashboard"> User Dashboard</label>
                     <button className="div-form-button" onClick={handledash}> Enter</button>
                 </div>
