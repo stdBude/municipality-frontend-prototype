@@ -357,13 +357,10 @@ button.unactivated {
     .sidebar{
         width: 90%;
         margin: 0 auto;
-        position: relative;
-        margin-bottom: 0px !important;
-        margin-top: 0px !important;
-        left: -0px;
-        top: 25px;
-        height: fit-content;
-       
+        position: static !important;
+        margin-bottom: 10px !important;
+        margin-top: 20px !important;
+      
     }
     .filter-input{
         height: 20px;
@@ -386,6 +383,7 @@ button.unactivated {
     }
     .table{
         margin: 0 auto;
+        position: static !important;
     }
    .statisics-by-type{
        margin-bottom: 20px;
@@ -490,8 +488,9 @@ button.unactivated {
       .sidebar {
         width: auto;
         padding-top: 17.5px !important;
-        top: 7px;
-        height: 210px;
+        margin-bottom: 7px !important;
+        margin-top: 10px !important;
+        height: 207.5px;
         margin-left: 7px;
     }
     .sidebar h2 {
@@ -597,6 +596,9 @@ button.unactivated {
     .icons{
         margin-top: 25px;
         margin-bottom: 5px;
+    }
+    .statistics{
+        margin-top: 30px;
     }
  }
 
