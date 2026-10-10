@@ -15,10 +15,13 @@ const Form = () => {
     const navigate = useNavigate()
     const [create, { error, isLoading }] = useCreateRequestMutation()
     const [selectedType, setSelectedType] = React.useState<boolean>(false)
+    const [selectedRegion, setSelectedRegion] = React.useState<boolean>(false)
     const comboRef = React.useRef<HTMLDivElement>(null)
+    const comboRef1 = React.useRef<HTMLDivElement>(null)
     const [typeSlug, setTypeSlug] = React.useState<string>('')
 
     useEffect(() =>{
+  
       const handleClick = (e: MouseEvent) =>{
         if (comboRef.current && !comboRef.current.contains(e.target as Node)){
           setSelectedType(false)
@@ -52,7 +55,16 @@ const Form = () => {
         }
         
     }
-
+    useEffect(() =>{
+      const handleClick = (e: MouseEvent) =>{
+        if (comboRef1.current && !comboRef1.current.contains(e.target as Node)){
+          setSelectedRegion(false)
+        }
+      }
+      document.addEventListener("click", handleClick)
+      return ()=>{document.removeEventListener("click", handleClick)}
+    
+    },[])
   return (
     <>
       {isLoading ? (
@@ -65,7 +77,16 @@ const Form = () => {
         <label className="form-label" htmlFor="Title">Title</label>
         <input className="form-input" style={{border: !title ? "1px solid #d41b1b" :""}} type="text" id="Title" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <label className="form-label" htmlFor="Region">Region</label>
-        <input className="form-input" style={{border: !region ? "1px solid #d41b1b" :""}} type="text" id="Region" placeholder="Region" value={region} onChange={(e) => setRegion(e.target.value)} />
+        <div className="form-type-field" ref={comboRef1}>
+          <p className="form-type-toggle" style={{border: !region ? "1px solid #d41b1b" :""}} onClick={() => setSelectedRegion((prev) => !prev)}>{region || 'Select Region'}</p>
+          <section className="form-sec" id="Type" style={{display: selectedRegion ? 'block' : 'none'}}>
+            <p style={{borderRadius: "5px 5px 0px 0px"}} onClick= {() => {setType('شارع جمال');  setSelectedRegion(false)}}> شارع جمال</p>
+            <p onClick= {() => {setRegion('قوارشة');  setSelectedRegion(false)}}> قوارشة</p>
+            <p onClick= {() => {setRegion('راس العبيدة');  setSelectedRegion(false)}}> راس العبيدة</p>
+            <p onClick= {() => {setRegion('قاريونس');  setSelectedRegion(false)}}> قاريونس</p>
+            <p style={{borderRadius: "0px 0px 5px 5px"}} onClick= {() => {setRegion('شارع دبي');  setSelectedRegion(false)}}> شارع دبي</p>
+          </section>
+        </div>
         <label className="form-label" htmlFor="Type">Type</label>
         
         <div className="form-type-field" ref={comboRef}>

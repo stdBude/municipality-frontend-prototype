@@ -10,6 +10,7 @@ import UserData from './UserData.tsx';
 import store from './elements/redux/configure.tsx';
 import { Provider } from 'react-redux';
 import NavigateLink from './NavigateLink.tsx';
+import NonExisted from './NonExisted.tsx';
 
 const router = createBrowserRouter([
   { path: "/Login", element: <App />, },
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
   { path: "/Dashboard-item/:id", element: <DashboardItem /> },
   { path: "/user-dashboard/:id", element: <UserDashboard /> },
   { path: "/user-data/:id", element: <UserData /> },
-  { path: "/Navigation/:id", element: <NavigateLink />}
+  { path: "/Navigation/:id", element: <NavigateLink />},
+  { path: "/*", element: <NonExisted />}
 ]);
 
 createRoot(document.getElementById('root')!).render(

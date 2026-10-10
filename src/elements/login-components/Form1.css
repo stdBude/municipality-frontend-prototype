@@ -1,31 +1,18 @@
-.login-page{
-    min-height: calc(100vh - 72px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    top: -5vh ;
-    padding-top: 110px;
-    box-sizing: border-box;
-}
-
 .login-form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    margin:0 auto;
+    box-shadow: 0 0 5px #363636;
+    padding:30px;
     position: relative;
-    background-color: #ffffff;
-    width: 300px;
-    margin: 0 auto;
-    
-    padding: 48px;
-    border-radius: 40px;
-    box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.473);
+    top:20vh;
+    width:400px;
+    border-radius:20px;
+    box-sizing:border-box;
+    margin-bottom:20px !important;
 }
 #login-logo{
     display: block;
-    width: 100%;
+    width: 80px;
+    height: 50px;
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: #d4d1d18f;
@@ -86,14 +73,15 @@
     scale: 1.02;
 }
 
-.frame{
+.frame5{
     animation-name: loading;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-
+    margin:0 auto;
     position: relative;
-    top: 250px;
+    display:block;
+    top: 35vh;
 }
 
 @keyframes loading{
@@ -133,17 +121,14 @@
     margin-bottom: 10px;
 }
 @media (min-width: 320px) and (max-width: 767px){ 
-    .login-page{
-   
-        width: 90%;
-        margin: 0 auto;
-        position: relative;
-        top: -7vh !important;
-    }
+   .login-page{
+    width:100%;
+   }
     .login-form{
         padding: 30px !important;
         padding-bottom: 40px !important;
-        
+        width: 90%;
+        box-sizing:border-box;
     }
 }
 
@@ -153,32 +138,17 @@
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1023px){ 
-      .login-page{
    
-        
-        margin: 0 auto;
-        position: relative;
-        top: 60px;
-    }
     .login-form{
-        padding: 50px !important;
-        padding-bottom: 50px !important;
+        padding: 30px !important;
+        padding-bottom: 30px !important;
+        box-sizing:border-box;
     }
 }
 
 /* Small laptops / tablet landscape */
 @media (min-width: 1024px) { 
-     .login-page{
    
-        margin: 0 auto;
-        position: relative;
-        top: 20px;
-        
-    }
-    .login-form{
-        padding: 40px !important;
-        padding-bottom: 40px !important;
-    } 
 }
 
 /* Desktops */
@@ -191,14 +161,5 @@
 @media (min-width: 1920px) { }
 
 
-@media (max-height: 699px) {
-.login-page{
-   
-       
-        position: relative;
-        top: -150px;
-    }
-    
-}
 
 

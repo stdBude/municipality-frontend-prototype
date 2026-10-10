@@ -203,8 +203,14 @@ const UserData = () => {
                      ) : isError ? (
                          null
                      ) : (
-                     <div className="pagination2">
-                        <button style = {{display: "inline", paddingInline : "40px"}} onClick={() => {
+                     <div className="pagination2" style={{margin:"20px auto",width:"90%", boxSizing:'border-box'}}>
+                        <button style={{paddingInline :Desktop? "40px":"15px"}}
+                        onClick={()=>{
+                            navigate(`/user-dashboard/${id}`)
+                        }}
+                        >Add Request...</button>
+                        
+                        <button style = {{display: "inline", paddingInline :Desktop? "40px":"15px"}} onClick={() => {
                                     const curr = currentPage -1 
                                     setPressed([true, false])
                                     setTimeout(() => {
@@ -247,12 +253,12 @@ const UserData = () => {
                                     }
                                 }}
                                 className={currentPage === i + 1 ? 'active1' : 'unactivated1'}
-                                style = {{display: "inline", paddingInline : "25px"}}
+                                style = {{display: "inline", paddingInline :Desktop? "25px":"20px"}}
                             >   
                                 {i + 1}
                             </button>
                         ))}
-                        <button style = {{display: "inline", paddingInline : "40px"}} onClick={() => {
+                        <button style = {{display: "inline", paddingInline :Desktop? "40px":"15px"}} onClick={() => {
                                     const curr = currentPage + 1 
                                     setPressed([false, true])
                                     setTimeout(() => {
@@ -275,6 +281,7 @@ const UserData = () => {
                                     }
                                     
                         }} className= {pressed[1]?'pressed1': ""}>next</button>
+                        
                     </div>)}
              </div>
          </div>

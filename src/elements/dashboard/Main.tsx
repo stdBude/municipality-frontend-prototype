@@ -63,6 +63,8 @@ const Main = () => {
 
 
   useEffect(() =>{
+    if(requestsError || countsError || countsWholeError)
+        navigate("/Login")
     const token = localStorage.getItem('token')
     if(!token){
         return
@@ -83,7 +85,7 @@ const Main = () => {
    
    
     
-    }, [getRequests,getCountsWhole, currentPage, appliedType, appliedRegion])
+    }, [getRequests,getCountsWhole, currentPage, appliedType, appliedRegion, countsError, requestsError, countsWholeError])
 
     useEffect(() =>{
          const token = localStorage.getItem('token')

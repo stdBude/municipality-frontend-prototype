@@ -30,7 +30,7 @@ const Form = () => {
           localStorage.setItem('token', token)
           if(data?.user.role === 'user'){
             
-            navigate(`/Navigation/${data?.user._id}`)
+            navigate(`/user-data/${data?.user._id}`)
           }
           
           
@@ -51,7 +51,7 @@ const Form = () => {
     
   return (
     <div className="login-page">
-      { isLoadingAll ? (<AiOutlineLoading3Quarters className='frame' size={"50px"} color='rgb(11, 74, 211)'/>): 
+      { isLoadingAll ? (<AiOutlineLoading3Quarters className='frame5' size={"50px"} color='rgb(11, 74, 211)'/>): 
       (<form className="login-form" onSubmit= {onsubmit}>
         <div className='logo-order'>
           <FaBuildingColumns id ="login-logo"  color="rgb(211, 179, 0)" fontSize={50} />

@@ -45,6 +45,8 @@ const DashboardItem = () => {
   }
 
   useEffect(() => {
+    if(isError || requestsIsError)
+      navigate("/Login")
     const token = localStorage.getItem('token')
     if(!token){
         return
@@ -54,7 +56,8 @@ const DashboardItem = () => {
         await getRequests({token,id:fetchId.user._id, page : 1, limit: 20}).unwrap()
       }
       fetchData()
-  }, [getRequestById,getRequests, id])
+
+  }, [getRequestById,getRequests, id, isError, requestsIsError])
   useEffect(() => {
     const token = localStorage.getItem('token')
     if(!token || !data){

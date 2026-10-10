@@ -1,4 +1,4 @@
-.login-form{
+.login-form1{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -11,6 +11,18 @@
     padding: 48px;
     border-radius: 40px;
     box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.473);
+}
+.region-whole{
+    width: 100%;
+    background:white;
+    height: 25px;
+    margin-bottom:20px;
+    margin:0 auto;
+}
+.region-header{
+    width: 100%;
+    background:white;
+    height: 25px;
 }
 .form-input,
 textarea.form-input{

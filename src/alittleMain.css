@@ -100,8 +100,8 @@
 .request-card-user  .table-row-user{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
-    
-     margin: 0 auto;
+    width:97%;
+    margin: 0 auto;
     place-content: center;
     place-items: center;
     
@@ -114,7 +114,10 @@
 }
 
 .request-card-user > .table-row-user img{
-    width: 60%;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height:135px;
 }
 
 .table-order-user{
@@ -153,7 +156,12 @@
     margin:30px auto ;
     display: flex;
     justify-content: center;
+    position:relative;
     
+}
+.pagination2 > button:first-child{
+    position: absolute;
+    left: 0;
 }
 .pagination2 button{
     margin-left: 3px;
@@ -328,7 +336,19 @@ button.unactivated1 {
 @media (min-width: 320px) and (max-width: 767px){ 
   
    
-    
+    .pagination2 > button:first-child{
+    position: static;
+    left: 0;
+    }
+    .pagination2{
+        width:90% !important;
+        
+    }
+    .pagination2  button{
+        box-sizing:border-box;
+        padding:5px;
+        font-size:15px
+    }
     .statistics1{
        
         display: block;
